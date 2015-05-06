@@ -1,6 +1,7 @@
 gamepad_test
 libffmpegsumo.so
 moonshot
+nwjs/
 nw
 nw.pak
 nwsnapshot
@@ -9,3 +10,7 @@ node-webkit.app
 moonshot.nw
 .DS_Store
 bin/
+node_modules/
+.idea/
+build/
+cache/
