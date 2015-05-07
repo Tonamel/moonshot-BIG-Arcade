@@ -22,6 +22,17 @@ module.exports = function(grunt) {
 			}
 		},
 
+		copy: {
+			nw: {
+				files: [{
+					expand: true,
+					cwd: "build/moonshot/win64",
+					src: ['**'],
+					dest: './'
+				}]
+			}
+		},
+
 		nodewebkit: {
 			options: {
 				platforms: ['win'],
@@ -32,7 +43,7 @@ module.exports = function(grunt) {
 
 		watch:{
 			scripts: {
-				files: ["source/js/**/*.js"],
+				files: ["source/lib/**/*.js", "!source/lib/vendor/**/*.js"],
 				tasks: ["jshint"],
 				options: {
 					spawn: false,
@@ -54,9 +65,11 @@ module.exports = function(grunt) {
     // 3. Where we tell Grunt we plan to use this plug-in.
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-less');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-node-webkit-builder');
 
     // 4. Where we tell Grunt what to do when we type "grunt" into the terminal.
     grunt.registerTask('default', ['watch']);
+	grunt.registerTask('build', ['nodewebkit', 'copy:nw']);
 };
