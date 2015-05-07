@@ -89,7 +89,7 @@
         ,autoSlide: 0
       });
 
-      function runDude() {
+      /*function runDude() {
         $('.dude').removeClass('dudeRun').animate({}, 0, function () {
           $('.dude').addClass('dudeRun');
         });
@@ -102,10 +102,10 @@
         });
         setTimeout(runHorsie, 10000);
       }
-      runHorsie();
+      runHorsie();*/
 
       this._entities = [];
-      $.each($('.entity'), function() {
+      /*$.each($('.entity'), function() {
         self._entities.push({
           $el: $(this)
           ,state: 'running'
@@ -146,7 +146,7 @@
             }
           }
         });
-      });
+      });*/
       var scene = window.document.getElementById('scene');
       this._parallax = new Parallax(scene);
       // this is mainly for debugging
