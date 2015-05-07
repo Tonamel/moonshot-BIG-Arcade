@@ -90,13 +90,14 @@
 
     ,finish: function() {
       this.teardown();
+      // TODO: Investigate this line. It doesn't do anything?
       typeof this._finish === 'function' && this._finish();
     }
 
     ,teardown: function() {
       this._input.teardown();
     }
-  }
+  };
 
   exports.RomCheck = RomCheck;
 

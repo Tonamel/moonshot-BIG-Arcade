@@ -30,32 +30,34 @@
       this._btnDown = {};
       this.gamepad = gamepad;
 
-      // Start, coin, action keys
       var mapping = {};
-      mapping['SPACE']        = 'action';
-      mapping['LEFT_BRACKET'] = 'action';
-      mapping['PLUS']         = 'coin';
-      // DEBUGGING KEYS
-      mapping['F']            = 'fullscreen';
-      mapping['Q']            = 'quit';
-      mapping['I']            = 'inspector';
-      mapping['LEFT_ARROW']   = 'left';
-      mapping['RIGHT_ARROW']  = 'right';
-      mapping['UP_ARROW']     = 'up';
-      mapping['DOWN_ARROW']   = 'down';
 
-      _.extend(mapping, {
-        DPAD_LEFT:            'left'
-        ,DPAD_UP:             'up'
-        ,DPAD_RIGHT:          'right'
-        ,DPAD_DOWN:           'down'
-        ,FACE_1:              'button1'
-        ,FACE_2:              'button2'
-        ,FACE_3:              'button3'
-        ,FACE_4:              'button4'
-        ,LEFT_TOP_SHOULDER:   'button5'
-        ,RIGHT_TOP_SHOULDER:  'button6'
-      });
+      // Start, coin, action keys
+      mapping.SPACE               = 'action';
+      mapping.LEFT_BRACKET        = 'action';
+      mapping.PLUS                = 'coin';
+
+      // DEBUGGING KEYS
+      mapping.F                   = 'fullscreen';
+      mapping.Q                   = 'quit';
+      mapping.I                   = 'inspector';
+      mapping.LEFT_ARROW          = 'left';
+      mapping.RIGHT_ARROW         = 'right';
+      mapping.UP_ARROW            = 'up';
+      mapping.DOWN_ARROW          = 'down';
+
+      // controller keys
+      mapping.DPAD_LEFT           = 'left';
+      mapping.DPAD_UP             = 'up';
+      mapping.DPAD_RIGHT          = 'right';
+      mapping.DPAD_DOWN           = 'down';
+      mapping.FACE_1              = 'button1';
+      mapping.FACE_2              = 'button2';
+      mapping.FACE_3              = 'button3';
+      mapping.FACE_4              = 'button4';
+      mapping.LEFT_TOP_SHOULDER   = 'button5';
+      mapping.RIGHT_TOP_SHOULDER  = 'button6';
+
 
       // Handle meta element key bindings
       $(window).keydown( _.bind(this.keydown, this) );
@@ -274,7 +276,7 @@
        4: 'PULT_LEFT',
        5: 'PULT_RIGHT',
        219: 'LEFT_BRACKET',
-       22: 'RIGHT_BRACKET',
+       22: 'RIGHT_BRACKET'
     }
   });
 

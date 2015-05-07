@@ -168,6 +168,7 @@
       window.moonshot._entities.forEach(function(entity) {
         entity.animate();
       });
+      // TODO: __proto__ is depreciated. Do this some other way.
       window.requestAnimationFrame(window.moonshot.__proto__.animate);
     }
     ,setAttractMode: function(enable, permanent) {
@@ -259,7 +260,7 @@
         , options = this.games[gameSlug].cwd ? {cwd: this.games[gameSlug].cwd} : {};
 
       // No executable? Don't start anything.
-      if (!exec) return;
+      if (!exec){ return; }
 
       this._input.teardown();
       this.setAttractMode(false, true);

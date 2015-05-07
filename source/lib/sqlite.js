@@ -53,7 +53,7 @@
   function _buildOutput(stdout) {
     var output = stdout.toString().split('\n');
     output = output.reduce(function(sum, line) {
-      if (line) sum.push(line);
+      if (line) { sum.push(line); }
       return sum;
     }, []);
     output = output.map(function(line) { return line.split('|'); });
