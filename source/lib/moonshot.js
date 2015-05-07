@@ -168,8 +168,7 @@
       window.moonshot._entities.forEach(function(entity) {
         entity.animate();
       });
-      // TODO: __proto__ is depreciated. Do this some other way.
-      window.requestAnimationFrame(window.moonshot.__proto__.animate);
+      window.requestAnimationFrame(Object.getPrototypeOf(window.moonshot).animate);
     }
     ,setAttractMode: function(enable, permanent) {
       var self = this;
