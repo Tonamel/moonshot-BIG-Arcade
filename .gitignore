@@ -14,3 +14,7 @@ node_modules/
 .idea/
 build/
 cache/
+icudtl.dat
+locales/
+sqlite3.def
+moonshot_stats.sqlite
